@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contador HTML</title>
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body {
+                text-shadow: black 2px 3px;
+                min-height: 100vh;
+                place-content: center;
+                display: grid;
+                place-items: center;
+                background: black;
+                color: white;
+                text-align: center;
+            }
+            section {
+                padding: 120px;
+                background: rgb(49, 46, 46);
+                border-radius: 20px;
+            }
+            p {
+                text-shadow: black 4px 6px;
+                font-size: 120px;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <h1>contador</h1>
+            <p></p>
+            <button onclick="minus()">menos</button>
+            <button onclick="add()">mais</button>
+        </section>
+        <script>
+
+            let numero = 0
+
+            function minus() {
+                numero--
+                render()
+            }
+            function add() {
+                numero++
+                render()
+            }
+            function render() {
+                const p = document.querySelector("p")
+                p.innerText = numero
+            }
+            
+            render()
+        </script>
+    </body>
+</html>

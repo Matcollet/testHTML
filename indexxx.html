@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>test</title>
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body {
+                text-shadow: black 2px 3px;
+                min-height: 100vh;
+                place-content: center;
+                place-items: center;
+                background: black;
+                color: blue;
+            }
+            p {
+                font-size: 120px;
+                text-shadow: black 4px 6px;
+            }
+            section {
+                text-align: center;
+                background: rgb(48, 42, 42);
+                padding: 120px;
+                border-radius: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+
+            <h1>contador</h1>
+            <p>0</p>
+            <button onclick="minus()">diminuir1</button>
+            <button onclick="add()">aumentar1</button>
+        </section>
+        <script>
+
+            let numero = 0
+
+            function minus() {
+                numero--
+                render()
+            }
+            function add() {
+                numero++
+                render()
+            }
+
+            function render() {
+                const p = document.querySelector("p")
+                p.innerText = numero
+            }
+        </script>
+    </body>
+</html>
