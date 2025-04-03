@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Contador HTML</title>
+        <title>xixi coco</title>
         <style>
             * {
                 margin: 0;
                 box-sizing: border-box;
             }
             body {
-                text-shadow: black 2px 3px;
                 min-height: 100vh;
-                place-content: center;
-                display: grid;
-                place-items: center;
                 background: black;
+                place-items: center;
+                place-content: center;
                 color: white;
-                text-align: center;
             }
             section {
+                background: rgb(76, 75, 75);
+                text-align: center;
                 padding: 120px;
-                background: rgb(49, 46, 46);
-                border-radius: 20px;
+                border-radius: 30px;
             }
             p {
-                text-shadow: black 4px 6px;
-                font-size: 120px;
+                font-size: 100px;
             }
         </style>
     </head>
@@ -32,8 +29,8 @@
         <section>
             <h1>contador</h1>
             <p></p>
-            <button onclick="minus()">menos</button>
-            <button onclick="add()">mais</button>
+            <button onclick="minus()">MENOS 1</button>
+            <button onclick="add()">MAIS 1</button>
         </section>
         <script>
 
@@ -47,11 +44,11 @@
                 numero++
                 render()
             }
+
             function render() {
                 const p = document.querySelector("p")
                 p.innerText = numero
             }
-            
             render()
         </script>
     </body>
