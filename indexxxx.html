@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>xixi coco</title>
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body {
+                min-height: 100vh;
+                background: black;
+                place-items: center;
+                place-content: center;
+                color: white;
+            }
+            section {
+                background: rgb(76, 75, 75);
+                text-align: center;
+                padding: 120px;
+                border-radius: 30px;
+            }
+            p {
+                font-size: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <h1>contador</h1>
+            <p></p>
+            <button onclick="minus()">MENOS 1</button>
+            <button onclick="add()">MAIS 1</button>
+        </section>
+        <script>
+
+            let numero = 0
+
+            function minus() {
+                numero--
+                render()
+            }
+            function add() {
+                numero++
+                render()
+            }
+
+            function render() {
+                const p = document.querySelector("p")
+                p.innerText = numero
+            }
+            render()
+        </script>
+    </body>
+</html>

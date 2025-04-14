@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cocoxixi</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+            body {
+                min-height: 100vh;
+                place-items: center;
+                place-content: center;
+                color: white;
+                background: rgb(53, 0, 0);
+            }
+            section {
+                text-align: center;
+                background: gray;
+                border-radius: 30px;
+                padding: 50px;
+            }
+            p {
+                font-size: 120px;
+                color: rgb(53, 0, 0);
+            }
+            button {
+                color: rgb(53, 0, 0);
+                background: rgb(219, 216, 216);
+            }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>contador</h1>
+        <p></p>
+        <button onclick="menos1()">diminuirmaisumaunidadedenúmero</button>
+        <button onclick="mais1()">adicionarmaisumaunidadedenúmero</button>
+        </section>
+        <script>
+            let numero = 0
+        function mais1() {
+            numero++
+            render()
+        }
+        function menos1() {
+            numero--
+            render()
+        }
+        function render() {
+            const p = document.querySelector("p")
+            p.innerText = numero
+        }
+        render()
+    </script>
+</body>
+</html>
