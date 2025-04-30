@@ -10,14 +10,50 @@
             box-sizing: border-box;
         }
         body {
-            background: cyan;
+            min-height: 100vh;
+            background: black;
+            place-content: center;
+            place-items: center;
+        }
+        section {
+            background: grey;
+            color: white;
+            padding: 70px;
+            border-radius: 30px;
+            text-align: center;
+        }
+        p {
+            text-shadow: 2px 1px black;
+            font-size: 100px
+        }
+        h1 {
+            text-shadow: 2px 1px black;
         }
     </style>
 </head>
 <body>
-    <h1>sim</h1>
-    <p>0</p>
-    <button onclick="menosim()">sim-</button>
-    <button onclick="maisim()">sim+</button>
+    <section>
+        <h1>sim</h1>
+        <p>0</p>
+        <button onclick="menosim()">sim-</button>
+        <button onclick="maisim()">sim+</button>
+    </section>
 </body>
+<script>
+    let numero = 0
+
+    function menosim() {
+        numero--
+        render()
+    }
+    function maisim() {
+        numero++
+        render()
+    }
+    function render() {
+        const p = document.querySelector("p")
+        p.innerText = numero
+    }
+    render()
+</script>
 </html>
