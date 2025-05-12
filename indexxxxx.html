@@ -36,6 +36,7 @@
         <h1>sim</h1>
         <p>0</p>
         <button onclick="menosim()">sim-</button>
+        <button onclick="zerar()">zerar</button>
         <button onclick="maisim()">sim+</button>
     </section>
 </body>
@@ -50,10 +51,19 @@
         numero++
         render()
     }
+    function zerar() {
+        numero = 0
+        render()
+    }
     function render() {
         const p = document.querySelector("p")
         p.innerText = numero
     }
+    document.addEventListener("keydown", function(event) {
+    if (event.key === "0") {
+        zerar()
+    }
+})
     render()
 </script>
 </html>
