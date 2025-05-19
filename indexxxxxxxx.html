@@ -18,6 +18,13 @@
         p{
             font-size: 120px;
         }
+        button{
+            border-radius: 10px;
+            border: none;
+        }
+        button:hover{
+            background: rgb(70, 70, 70);
+        }
         section{
             background: gray;
             text-align: center;
@@ -30,14 +37,20 @@
     <section>
         <h1>contador</h1>
         <p></p>
+        <button onclick="menosdez()">-10</button>
         <button onclick="menosum()">-1</button>
         <button onclick="zerar()">zerar</button>
         <button onclick="maisum()">+1</button>
+        <button onclick="maisdez()">+10</button>
     </section>
     <script>
         let numero = 0
         function menosum() {
             numero --
+            render()
+        }
+        function menosdez() {
+            numero = numero - 10
             render()
         }
         function zerar() {
@@ -46,6 +59,10 @@
         }
         function maisum() {
             numero ++
+            render()
+        }
+        function maisdez() {
+            numero = numero + 10
             render()
         }
         function render() {
