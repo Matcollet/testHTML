@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <section>
+        <h1>contador</h1>
+        <p>0</p>
+        <button onclick="menosum()">-1</button>
+        <button onclick="maisum()">+1</button>
+    </section>
+    <script>
+        let numero = 0
+
+        function menosum() {
+            numero --
+            console.log(numero)
+        }
+        function maisum() {
+            numero ++
+            console.log(numero)
+        }
+    </script>
+</body>
+</html>
